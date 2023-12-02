@@ -8,6 +8,7 @@ import { FaUser } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
 import { FaCircleArrowUp } from "react-icons/fa6";
 import CustomGallery from '@/components/gallery';
+import AudioPlayer from '@/components/sound';
 
 const julius = Julius_Sans_One({ 
   weight: '400',
@@ -19,8 +20,7 @@ const roboto = Roboto({
 });
 
 export default function Home() {
-  const images = Array.from({ length: 39 }, (_, index) => `/img_gallery/${index + 1}.jpg`);
-
+  const images = Array.from({ length: 34 }, (_, index) => `/img_gallery/${index + 1}.jpg`);
   return (
     <>
       <Head>
@@ -39,13 +39,14 @@ export default function Home() {
           <Header/>
           <div className={styles.welcome}>
             <h1>ESENCIA PAISA, PUES</h1>
+            <AudioPlayer id_sound="LqoVJPFAbf4"/>
             <p>
               "Medellín es un caleidoscopio de colores y sonidos, 
               cada calle espera ser explorada y contada"
             </p>
-            <div>
+            <section>
               <Link href="#gallery">GALERIA</Link>
-            </div>
+            </section>
           </div>
         </section>
 
@@ -62,6 +63,7 @@ export default function Home() {
 
         <section className={styles.locations} id='locations'>
           <h1 className={julius.className}>UBICACIONES</h1>
+          <AudioPlayer id_sound="yMlaFAsr9DM"/>
           <section className={roboto.className}>
             <div>
               <IoLocationSharp />
