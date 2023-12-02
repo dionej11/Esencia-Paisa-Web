@@ -65,15 +65,15 @@ export default function Home() {
           <section className={roboto.className}>
             <div>
               <IoLocationSharp />
-              <Link href="">Centro comercial El Palacio</Link>
+              <Link target='_blank' href="https://maps.app.goo.gl/xwSFaCxyhqSoV9Mh9">Centro comercial El Palacio</Link>
             </div>
             <div>
               <IoLocationSharp />
-              <Link href="">El hueco</Link>
+              <Link target='_blank' href="https://maps.app.goo.gl/KcjXxtNyNv93Xasj8">El hueco</Link>
             </div>
             <div>
               <IoLocationSharp />
-              <Link href="">Estación San Antonio</Link>
+              <Link target='_blank' href="https://maps.app.goo.gl/ikiAg8iz6B6mymVH6">Estación San Antonio</Link>
             </div>
           </section>
         </section>
