@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { IoLocationSharp } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
+import { FaCircleArrowUp } from "react-icons/fa6";
+import CustomGallery from '@/components/gallery';
 
 const julius = Julius_Sans_One({ 
   weight: '400',
@@ -17,6 +19,8 @@ const roboto = Roboto({
 });
 
 export default function Home() {
+  const images = Array.from({ length: 39 }, (_, index) => `/img_gallery/${index + 1}.jpg`);
+
   return (
     <>
       <Head>
@@ -25,8 +29,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.top}>
+        <Link href="#home">
+          <FaCircleArrowUp />
+        </Link>
+      </div>
       <div className={styles.container}>
-        <section className={`${styles.home} ${julius.className}`}>
+        <section className={`${styles.home} ${julius.className}`} id='home'>
           <Header/>
           <div className={styles.welcome}>
             <h1>ESENCIA PAISA, PUES</h1>
@@ -35,12 +44,12 @@ export default function Home() {
               cada calle espera ser explorada y contada"
             </p>
             <div>
-              <Link href="">GALERIA</Link>
+              <Link href="#gallery">GALERIA</Link>
             </div>
           </div>
         </section>
 
-        <section className={styles.about}>
+        <section className={styles.about} id='about'>
           <h1 className={julius.className}>SOBRE EL PROYECTO</h1>
           <p className={roboto.className} >
             El proyecto "Esencia Paisa, Pues" surge como una iniciativa de un grupo de estudiantes del Politécnico Jaime Isaza Cadavid con el propósito de capturar y resaltar la estética única de la venta y comercio del centro de Medellín. La elección de este tema se fundamenta en el deseo de explorar y mostrar la riqueza cultural y la vida cotidiana que define a esta emblemática zona de la ciudad.
@@ -51,7 +60,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className={styles.locations}>
+        <section className={styles.locations} id='locations'>
           <h1 className={julius.className}>UBICACIONES</h1>
           <section className={roboto.className}>
             <div>
@@ -69,7 +78,7 @@ export default function Home() {
           </section>
         </section>
 
-        <section className={styles.contact}>
+        <section className={styles.contact} id='contact'>
           <h1 className={julius.className}>CONTACTO</h1>
           <section className={roboto.className}>
             <div>
@@ -95,7 +104,7 @@ export default function Home() {
           </section>
         </section>
 
-        <section className={styles.gallery}>
+        <section className={styles.gallery} id='gallery'>
           <h1 className={julius.className}>GALERIA</h1>
           <p className={roboto.className} >
             En el corazón del centro de Medellín, donde las calles bulliciosas y los colores vibrantes convergen, se encuentra un universo de tesoros que capturan la esencia paisa. 
@@ -109,18 +118,7 @@ export default function Home() {
           <FaArrowDown />
         </section>
       </div>
-      <div className={styles.gallery_container}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <CustomGallery images={images}/>
     </>
   )
 }

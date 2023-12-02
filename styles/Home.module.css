@@ -1,3 +1,10 @@
+.top {
+  position: fixed;
+  right: 2rem;
+  bottom: 10px;
+  font-size: 4rem;
+  color: white;
+}
 .container {
   width: 100%;
   display: grid;
@@ -40,6 +47,9 @@
   justify-content: center;
   align-items: center;
   border: 2px solid white;
+}
+.welcome div:hover {
+  background-color: rgba(240, 248, 255, 0.367);
 }
 .about {
   width: 100%;
@@ -173,22 +183,4 @@
 }
 .gallery svg {
   font-size: 3rem;
-}
-
-.gallery_container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto, 150vh);
-  gap: 5px;
-}
-.gallery_container div {
-  width: 100%;
-  height: 50vh;
-}
-.gallery_container div:nth-child(even) {
-  background-color: aqua;
-}
-.gallery_container div:nth-child(odd) {
-  background-color: aquamarine;
 }

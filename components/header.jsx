@@ -15,10 +15,10 @@ return (
             <Icon_ep />
         </div>
         <ul>
-            <li><Link href="">INICIO</Link></li>
-            <li><Link href="">SOBRE EL PROYECTO</Link></li>
-            <li><Link href="">UBICACIONES</Link></li>
-            <li><Link href="">CONTACTO</Link></li>
+            <li><Link href="#home">INICIO</Link></li>
+            <li><Link href="#about">SOBRE EL PROYECTO</Link></li>
+            <li><Link href="#locations">UBICACIONES</Link></li>
+            <li><Link href="#contact">CONTACTO</Link></li>
         </ul>
     </header>
 );
