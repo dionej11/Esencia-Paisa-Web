@@ -20,7 +20,7 @@ const roboto = Roboto({
 });
 
 export default function Home() {
-  const images = Array.from({ length: 34 }, (_, index) => `/img_gallery/${index + 1}.jpg`);
+  const images = Array.from({ length: 34 }, (_, index) => `/gallery/${index + 1}.jpg`);
   return (
     <>
       <Head>
