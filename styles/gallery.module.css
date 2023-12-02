@@ -42,3 +42,24 @@ max-height: 80vh;
 object-fit: contain;
 border-radius: 8px;
 }
+.close_btn {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+@media (max-width: 900px) {
+    .gallery_container {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+    }
+    .gallery_container div {
+        width: 100%;
+        height: 15vh;
+    }
+    .ModalImage {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+}

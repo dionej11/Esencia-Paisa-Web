@@ -40,7 +40,7 @@ const CustomGallery = ({ images }) => {
         onRequestClose={closeModal}
         contentLabel="Image Modal"
       >
-        <button onClick={closeModal}>❌</button>
+        <button className={styles.close_btn} onClick={closeModal}>❌</button>
         <img
           className={styles.ModalImage}
           src={customGalleryItems[selectedImageIndex]?.original}

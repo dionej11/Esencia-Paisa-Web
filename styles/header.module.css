@@ -32,3 +32,24 @@
 .header ul li:hover {
     border-bottom: 1px solid white;
 }
+
+@media (max-width: 900px) {
+    .header {
+        padding: 0;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .header div {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+    }
+    .header ul {
+        width: 100%;
+    }
+    .header ul li {
+        font-size: 15px;
+    }
+}
